@@ -3,7 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Marathon Registration form</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Marathon Registration form!</h1>
+    <form action="/registration">
+      <p>
+        <label for="username">Username</label>
+        <input
+          type="text"
+          required
+          id="username"
+          name="user"
+          placeholder="Enter Username"
+        />
+        <label for="lastN">Lastname</label>
+        <input
+          type="text"
+          required
+          id="lastN"
+          name="last"
+          placeholder="Enter lastName"
+        />
+      </p>
+      <p>
+        <b>Select Marathon type: </b>
+      </p>
+      <input
+        type="radio"
+        name="MarathonType"
+        id="selectRadio"
+        selected
+        value="5k"
+      /><label for="selectRadio">Fun Run 5k</label>
+      <br />
+      <input
+        type="radio"
+        name="MarathonType"
+        id="selectRadio"
+        selected
+        value="halfMarathon"
+      /><label for="selectRadio">half marathon</label>
+      <br />
+      <input
+        type="radio"
+        name="MarathonType"
+        id="selectRadio"
+        selected
+        value="fullMarathon"
+      /><label for="selectRadio">full Marathon</label>
+      <br />
+      <label for="emailText">Username</label>
+      <input
+        type="email"
+        required
+        id="emailText"
+        name="email"
+        placeholder="Enter email"
+      />
+      <label for="password">password</label>
+      <input
+        type="password"
+        required
+        id="password"
+        name="pass"
+        placeholder="Enter Password"
+      />
+      <br />
+      <label for="age">Select your age:</label>
+      <select id="age">
+        <option name="ageRun" value="under18" selected>Under 18</option>
+        <option id="age" name="ageRun" value="over18less60" selected>
+          over 18 and less than 60
+        </option>
+        <option id="age" name="ageRun" value="above60" selected>
+          above 60
+        </option>
+      </select>
+
+      <br />
+      <button type="submit">Register</button>
+    </form>
+  </body>
 </html>
